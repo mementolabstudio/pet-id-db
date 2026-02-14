@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Protocolo de Emergencia - Boby Navarro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --primary: #1e293b;
+            --accent: #2563eb;
+            --danger: #ef4444;
+            --success: #10b981;
+            --glass: rgba(255, 255, 255, 0.9);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg-gradient);
+            margin: 0; padding: 0; color: var(--primary);
+            display: flex; justify-content: center; min-height: 100vh;
+        }
+
+        .phone-container {
+            width: 100%; max-width: 430px;
+            background: #fff; position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            display: flex; flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            position: relative; height: 380px;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .pet-img { width: 100%; height: 100%; object-fit: cover; }
+
+        .status-pill {
+            position: absolute; top: 20px; left: 20px;
+            background: var(--danger); color: white;
+            padding: 6px 14px; border-radius: 20px;
+            font-size: 11px; font-weight: 800; letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+        }
+
+        .main-content {
+            padding: 0 25px 120px 25px;
+            margin-top: -40px; position: relative;
+            z-index: 2;
+        }
+
+        .identity-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 25px; border-radius: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.3);
+            text-align: center;
+        }
+
+        h1 { margin: 0; font-size: 28px; font-weight: 800; color: #0f172a; text-transform: uppercase; line-height: 1.1; }
+        .breed { color: #64748b; font-size: 14px; font-weight: 600; margin-top: 8px; }
+
+        .quick-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 15px; margin-top: 25px;
+        }
+
+        .grid-item {
+            background: #f8fafc; padding: 15px;
+            border-radius: 18px; border: 1px solid #f1f5f9;
+        }
+
+        .grid-label { font-size: 10px; color: #94a3b8; font-weight: 800; text-transform: uppercase; }
+        .grid-value { font-size: 14px; color: #334155; font-weight: 600; margin-top: 4px; word-wrap: break-word;}
+
+        .section-title {
+            font-size: 16px; font-weight: 800; margin: 30px 0 15px 5px;
+            display: flex; align-items: center;
+        }
+
+        .care-card {
+            background: #fff; border-radius: 20px;
+            padding: 20px; border: 1.5px solid #fee2e2;
+        }
+
+        .warning-text { color: #b91c1c; font-size: 14px; line-height: 1.6; font-weight: 500; }
+
+        .btn-location {
+            width: 100%; margin-top: 20px; box-sizing: border-box;
+            background: #f1f5f9; border: none; padding: 18px;
+            border-radius: 18px; display: flex; align-items: center;
+            justify-content: center; text-decoration: none;
+            color: var(--accent); font-weight: 700; transition: 0.3s;
+        }
+
+        .action-bar {
+            position: fixed; bottom: 0; width: 100%; max-width: 430px;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(20px);
+            padding: 20px 25px 35px 25px;
+            border-top: 1px solid #f1f5f9;
+            box-sizing: border-box;
+        }
+
+        .btn-emergency {
+            background: var(--accent); color: white;
+            width: 100%; padding: 20px; border-radius: 20px;
+            text-decoration: none; display: flex; align-items: center;
+            justify-content: center; font-size: 18px; font-weight: 800;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+            box-sizing: border-box;
+        }
+
+        .btn-emergency svg { margin-right: 12px; }
+    </style>
+</head>
+<body>
+
+    <div class="phone-container">
+        <div class="hero">
+            <img src="img/boby_navarro_20260214_img.jpg" class="pet-img">
+            <div class="status-pill">● PROTOCOLO DE EXTRAVÍO</div>
+        </div>
+
+        <div class="main-content">
+            <div class="identity-card">
+                <h1>Boby Navarro</h1>
+                <div class="breed">Eléctrico 5 años</div>
+                
+                <div class="quick-grid">
+                    <div class="grid-item">
+                        <div class="grid-label">Personalidad</div>
+                        <div class="grid-value">Jugueton, alegre, no muerde</div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-label">Microchip ID</div>
+                        <div class="grid-value">01506468486460</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title">🏥 Notas Médicas Críticas</div>
+            <div class="care-card">
+                <div class="warning-text">
+                    No tiene alergias pero si se suele asustar mucho
+                </div>
+            </div>
+
+            <div class="section-title">📍 Punto de Encuentro</div>
+            <div class="grid-item" style="background: white;">
+                <div class="grid-value">Ahorro 4122 Colonía Lagos de Oriente Guadalajara Jalisco</div>
+                <p style="font-size: 12px; color: #64748b; margin: 10px 0;">Si me has encontrado, este es mi hogar habitual.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Ahorro%204122%20Colon%C3%ADa%20Lagos%20de%20Oriente%20Guadalajara%20Jalisco" class="btn-location" target="_blank">
+                    Abrir en Google Maps
+                </a>
+            </div>
+            
+            <p style="text-align: center; font-size: 12px; color: #94a3b8; margin-top: 30px;">
+                Memento Lab Studio © 2026<br>
+                Tecnología de Recuperación Animal
+            </p>
+        </div>
+
+        <div class="action-bar">
+            <a href="tel:3322486655" class="btn-emergency">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                LLAMAR AL DUEÑO
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
